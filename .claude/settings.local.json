@@ -17,7 +17,16 @@
       "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./vercel.json)",
       "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./public/manifest.json)",
       "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./.github/workflows/ci.yml)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git tag:*)",
+      "Read(//c/Users/david/.claude/projects//**)",
+      "Read(//c/Users/david/.claude/projects/**)",
+      "Bash(node scripts/verify-agent.js AUTH_AGENT ./src/middleware.ts)",
+      "Bash(node scripts/verify-agent.js AUTH_AGENT ./src/app/api/auth/webhook/route.ts)",
+      "Bash(node scripts/verify-agent.js AUTH_AGENT ./src/lib/auth/session.ts)",
+      "Bash(node scripts/verify-agent.js AUTH_AGENT ./src/lib/auth/clerk.ts)",
+      "Bash(node scripts/verify-agent.js AUTH_AGENT ./src/hooks/useCurrentUser.ts)"
     ]
   }
 }

@@ -1,63 +1,41 @@
-import Image from "next/image";
+import { SignInButton } from "@/components/auth/SignInButton";
+import { UserMenu } from "@/components/auth/UserMenu";
+import { auth } from "@clerk/nextjs/server";
+import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+  const { userId } = await auth();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="flex flex-col min-h-screen">
+      <header className="flex items-center justify-between px-6 py-4 border-b border-[#E0DBD2]/10">
+        <Link href="/" className="font-[family-name:var(--font-display)] text-2xl text-[#C9A84C]">
+          Vêtu
+        </Link>
+        <nav className="flex items-center gap-4">
+          {userId ? (
+            <UserMenu />
+          ) : (
+            <SignInButton />
+          )}
+        </nav>
+      </header>
+
+      <main className="flex-1 flex flex-col items-center justify-center px-6 text-center">
+        <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl text-[#F7F4EF] mb-4">
+          Dressed with intention.
+        </h1>
+        <p className="text-lg md:text-xl text-[#7A7D88] max-w-lg mb-8">
+          Discover your colour season. Get outfit recommendations. Try on looks virtually.
+        </p>
+        <div className="flex gap-4">
+          <Link
+            href="/analyse"
+            className="rounded-lg bg-[#C9A84C] px-6 py-3 text-sm font-medium text-[#0A0A0B] transition-colors hover:bg-[#F0DFA0]"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Analyse your colours
+          </Link>
+          {!userId && <SignInButton />}
         </div>
       </main>
     </div>

@@ -2,14 +2,16 @@
 > Single source of truth. Orchestrator owns top-level sections.
 > Sub-agents append ONLY to their named section at the bottom.
 
-## 🟡 Project Status: DEVOPS COMPLETE → AUTH NEXT
+## 🟡 Project Status: AUTH COMPLETE → VISION + COLOR NEXT
 
 ## ✅ Completed
 - [x] Memory system initialized (18 files created)
 - [x] DEVOPS_AGENT: Scaffold, dependencies, env, constants, PWA, CI, design system
+- [x] AUTH_AGENT: Clerk middleware, webhooks, session context, auth UI
 
 ## 🔄 In Progress
-- [ ] AUTH_AGENT: User accounts, sessions, Clerk integration
+- [ ] VISION_AGENT: Photo capture, Claude Vision analysis
+- [ ] COLOR_AGENT: 12-season palette engine [PARALLEL with VISION]
 
 ## 📋 Queue (strict dependency order)
 - [ ] AUTH_AGENT: User accounts, sessions, Clerk integration
@@ -53,7 +55,18 @@ _None_
 - CSS variables defined for all Vêtu color tokens (ink, paper, gold, slate, muted, border)
 - Build verified: `npm run build` passes successfully
 ### [AUTH_AGENT UPDATES]
-_Pending_
+**2026-04-22 — COMPLETE**
+- `src/middleware.ts` created — protects /wardrobe, /advisor, /admin, /api/wardrobe, /api/advisor, /api/billing/portal
+- `src/app/api/auth/webhook/route.ts` created — handles Clerk `user.created` and `user.deleted` with Svix verification
+- `src/lib/auth/session.ts` created — `getAuthContext()` returns `{ userId, clerkId, email, tier }`
+- `src/lib/auth/clerk.ts` created — re-exports Clerk utilities
+- `src/components/auth/SignInButton.tsx` created — Vêtu-branded gold CTA
+- `src/components/auth/UserMenu.tsx` created — Clerk UserButton with custom dark theme
+- `src/hooks/useCurrentUser.ts` created — client-side hook fetching tier from billing API
+- `src/app/layout.tsx` updated — wrapped in ClerkProvider with Vêtu design system theme
+- `src/app/page.tsx` updated — basic landing page with auth-aware nav
+- Installed `svix` for webhook signature verification
+- Build passes successfully
 ### [VISION_AGENT UPDATES]
 _Pending_
 ### [COLOR_AGENT UPDATES]

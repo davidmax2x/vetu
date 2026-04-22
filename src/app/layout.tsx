@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, DM_Sans, DM_Mono } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -45,13 +46,44 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${cormorant.variable} ${dmSans.variable} ${dmMono.variable} h-full antialiased`}
+    <ClerkProvider
+      appearance={{
+        baseTheme: undefined,
+        variables: {
+          colorPrimary: '#C9A84C',
+          colorBackground: '#0A0A0B',
+          colorText: '#F7F4EF',
+          colorTextSecondary: '#7A7D88',
+          colorInputBackground: '#1A1A1B',
+          colorInputText: '#F7F4EF',
+          colorDanger: '#ef4444',
+          colorSuccess: '#22c55e',
+          borderRadius: '0.75rem',
+        },
+        elements: {
+          card: 'bg-[#0A0A0B] border border-[#E0DBD2]/20',
+          headerTitle: 'font-[family-name:var(--font-display)] text-2xl',
+          headerSubtitle: 'text-[#7A7D88]',
+          formButtonPrimary: 'bg-[#C9A84C] text-[#0A0A0B] hover:bg-[#F0DFA0]',
+          socialButtonsBlockButton: 'border-[#E0DBD2]/20 hover:bg-[#1A1A1B]',
+          dividerLine: 'bg-[#E0DBD2]/20',
+          dividerText: 'text-[#7A7D88]',
+          formFieldLabel: 'text-[#F7F4EF]',
+          formFieldInput: 'bg-[#1A1A1B] border-[#E0DBD2]/20 text-[#F7F4EF]',
+          footerActionLink: 'text-[#C9A84C] hover:text-[#F0DFA0]',
+          identityPreviewText: 'text-[#F7F4EF]',
+          identityPreviewEditButton: 'text-[#C9A84C]',
+        }
+      }}
     >
-      <body className="min-h-full flex flex-col bg-[var(--vetu-ink)] text-[var(--vetu-paper)] font-[family-name:var(--font-body)]">
-        {children}
-      </body>
-    </html>
+      <html
+        lang="en"
+        className={`${cormorant.variable} ${dmSans.variable} ${dmMono.variable} h-full antialiased`}
+      >
+        <body className="min-h-full flex flex-col bg-[#0A0A0B] text-[#F7F4EF] font-[family-name:var(--font-body)]">
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
