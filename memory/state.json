@@ -1,0 +1,333 @@
+{
+  "schema_version": "8.0",
+  "project": "Vetu",
+  "build_started": "2026-04-21",
+  "agents": {
+    "DEVOPS_AGENT": {
+      "status": "complete",
+      "files_verified": [
+        {
+          "filepath": "./package.json",
+          "checks": {
+            "exists": false,
+            "nonEmpty": false,
+            "linesOfCode": 0,
+            "imports": false,
+            "importError": "Cannot find module 'C:\\Users\\david\\Desktop\\Vetu\\package.json'\nRequire stack:\n- C:\\Users\\david\\Desktop\\Vetu\\scripts\\verify-agent.js"
+          },
+          "verified_at": "2026-04-22T08:35:15.802Z"
+        },
+        {
+          "filepath": "./package.json",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 50,
+            "imports": true
+          },
+          "verified_at": "2026-04-22T09:50:35.162Z"
+        },
+        {
+          "filepath": "./next.config.ts",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 27,
+            "imports": true
+          },
+          "verified_at": "2026-04-22T09:50:36.613Z"
+        },
+        {
+          "filepath": "./src/lib/constants.ts",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 129,
+            "imports": true
+          },
+          "verified_at": "2026-04-22T09:50:36.769Z"
+        },
+        {
+          "filepath": "./src/lib/utils.ts",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 23,
+            "imports": true
+          },
+          "verified_at": "2026-04-22T09:50:36.906Z"
+        },
+        {
+          "filepath": "./src/app/layout.tsx",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 58,
+            "imports": false,
+            "importError": "Unexpected token '{'"
+          },
+          "verified_at": "2026-04-22T09:50:36.995Z"
+        },
+        {
+          "filepath": "./.env.local.example",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 66,
+            "imports": false,
+            "importError": "Invalid or unexpected token"
+          },
+          "verified_at": "2026-04-22T09:53:57.022Z"
+        },
+        {
+          "filepath": "./vercel.json",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 8,
+            "imports": true
+          },
+          "verified_at": "2026-04-22T09:54:21.760Z"
+        },
+        {
+          "filepath": "./public/manifest.json",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 14,
+            "imports": true
+          },
+          "verified_at": "2026-04-22T09:54:21.808Z"
+        },
+        {
+          "filepath": "./.github/workflows/ci.yml",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 13,
+            "imports": false,
+            "importError": "Unexpected identifier 'CI'"
+          },
+          "verified_at": "2026-04-22T09:54:21.871Z"
+        },
+        {
+          "filepath": "./package.json",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 50,
+            "imports": true,
+            "importNote": "Non-JS file — import check skipped"
+          },
+          "verified_at": "2026-04-22T09:55:59.568Z"
+        },
+        {
+          "filepath": "./next.config.ts",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 27,
+            "imports": true
+          },
+          "verified_at": "2026-04-22T09:56:00.338Z"
+        },
+        {
+          "filepath": "./src/lib/constants.ts",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 129,
+            "imports": true
+          },
+          "verified_at": "2026-04-22T09:56:00.426Z"
+        },
+        {
+          "filepath": "./src/lib/utils.ts",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 23,
+            "imports": true
+          },
+          "verified_at": "2026-04-22T09:56:00.524Z"
+        },
+        {
+          "filepath": "./src/app/layout.tsx",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 58,
+            "imports": true,
+            "importNote": "Parsed by syntax check only (JSX/TSX)"
+          },
+          "verified_at": "2026-04-22T09:56:00.584Z"
+        },
+        {
+          "filepath": "./src/app/globals.css",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 35,
+            "imports": true,
+            "importNote": "Non-JS file — import check skipped"
+          },
+          "verified_at": "2026-04-22T09:56:00.651Z"
+        },
+        {
+          "filepath": "./.env.local.example",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 66,
+            "imports": true,
+            "importNote": "Non-JS file — import check skipped"
+          },
+          "verified_at": "2026-04-22T09:56:00.715Z"
+        },
+        {
+          "filepath": "./vercel.json",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 8,
+            "imports": true,
+            "importNote": "Non-JS file — import check skipped"
+          },
+          "verified_at": "2026-04-22T09:56:00.771Z"
+        },
+        {
+          "filepath": "./public/manifest.json",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 14,
+            "imports": true,
+            "importNote": "Non-JS file — import check skipped"
+          },
+          "verified_at": "2026-04-22T09:56:00.823Z"
+        },
+        {
+          "filepath": "./.github/workflows/ci.yml",
+          "checks": {
+            "exists": true,
+            "nonEmpty": true,
+            "linesOfCode": 13,
+            "imports": true,
+            "importNote": "Non-JS file — import check skipped"
+          },
+          "verified_at": "2026-04-22T09:56:00.886Z"
+        }
+      ],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "AUTH_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "VISION_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "COLOR_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "VALIDATOR_CP1": {
+      "status": "not_run",
+      "exit_code": null,
+      "run_at": null
+    },
+    "STYLE_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "VALIDATOR_CP2": {
+      "status": "not_run",
+      "exit_code": null,
+      "run_at": null
+    },
+    "TRYON_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "PERSISTENCE_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "SECURITY_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "BILLING_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "AFFILIATE_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "ADVISOR_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "VALIDATOR_CP3": {
+      "status": "not_run",
+      "exit_code": null,
+      "run_at": null
+    },
+    "ANALYTICS_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "GROWTH_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "UI_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "TEST_AGENT": {
+      "status": "not_started",
+      "files_verified": [],
+      "smoke_tests": {},
+      "git_tag": null
+    },
+    "LEVERAGE_AGENT": {
+      "status": "available",
+      "audits": []
+    },
+    "VALIDATOR_FINAL": {
+      "status": "not_run",
+      "exit_code": null,
+      "run_at": null
+    }
+  }
+}

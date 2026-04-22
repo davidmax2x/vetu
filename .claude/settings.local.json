@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./package.json)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(mv vetu-tmp/* .)",
+      "Bash(mv vetu-tmp/.[!.]* .)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./next.config.ts)",
+      "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./src/lib/constants.ts)",
+      "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./src/lib/utils.ts)",
+      "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./src/app/layout.tsx)",
+      "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./src/app/globals.css)",
+      "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./.env.local.example)",
+      "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./vercel.json)",
+      "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./public/manifest.json)",
+      "Bash(node scripts/verify-agent.js DEVOPS_AGENT ./.github/workflows/ci.yml)",
+      "Bash(git add:*)"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+# Vêtu Memory Index
+
+- [State Ledger](state.json) — Machine-verifiable ground truth for all agents
+- [Progress Log](PROGRESS.md) — Master project status and queue
+- [DevOps Agent](DEVOPS_AGENT.md) — Scaffold, deps, env, constants
+- [Auth Agent](AUTH_AGENT.md) — Clerk, sessions, user profiles
+- [Vision Agent](VISION_AGENT.md) — Photo capture, Claude Vision analysis
+- [Color Agent](COLOR_AGENT.md) — 12-season palettes, cultural variants
+- [Validator Agent](VALIDATOR_AGENT.md) — CP1, CP2, CP3, FINAL checkpoints
+- [Style Agent](STYLE_AGENT.md) — Outfit recommendations, body type
+- [Try-On Agent](TRYON_AGENT.md) — SDXL + IDM-VTON pipeline
+- [Persistence Agent](PERSISTENCE_AGENT.md) — Supabase, wardrobe, feedback
+- [Security Agent](SECURITY_AGENT.md) — Privacy, rate limits, GDPR
+- [Billing Agent](BILLING_AGENT.md) — Stripe, entitlements, paywall
+- [Affiliate Agent](AFFILIATE_AGENT.md) — Shopping links, click tracking
+- [Advisor Agent](ADVISOR_AGENT.md) — Aria chat, memory, proactive suggestions
+- [UI Agent](UI_AGENT.md) — Full frontend, components, store
+- [Test Agent](TEST_AGENT.md) — E2E, bias audit, security tests
+- [Analytics Agent](ANALYTICS_AGENT.md) — Posthog, retention, viral coefficient
+- [Growth Agent](GROWTH_AGENT.md) — Share cards, referrals, landing pages
+- [Leverage Agent](LEVERAGE_AGENT.md) — Founder time audit (meta-tool)
