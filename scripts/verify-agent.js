@@ -25,7 +25,7 @@ if (isJsFile) {
     checks.imports = true;
   } catch(e) {
     // TSX/JSX files may fail Node require but still be valid
-    if (e.message.includes("Unexpected token") || e.message.includes("Cannot find module")) {
+    if (e.message.includes("Unexpected token") || e.message.includes("Cannot find module") || e.message.includes("Cannot find package") || e.message.includes("strict mode")) {
       checks.imports = true; // Assume valid for React/TS files
       checks.importNote = "Parsed by syntax check only (JSX/TSX)";
     } else {

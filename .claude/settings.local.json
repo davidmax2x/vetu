@@ -26,7 +26,16 @@
       "Bash(node scripts/verify-agent.js AUTH_AGENT ./src/app/api/auth/webhook/route.ts)",
       "Bash(node scripts/verify-agent.js AUTH_AGENT ./src/lib/auth/session.ts)",
       "Bash(node scripts/verify-agent.js AUTH_AGENT ./src/lib/auth/clerk.ts)",
-      "Bash(node scripts/verify-agent.js AUTH_AGENT ./src/hooks/useCurrentUser.ts)"
+      "Bash(node scripts/verify-agent.js AUTH_AGENT ./src/hooks/useCurrentUser.ts)",
+      "Bash(node scripts/verify-agent.js VISION_AGENT ./src/lib/imagePreprocess.ts)",
+      "Bash(node scripts/verify-agent.js VISION_AGENT ./src/app/api/analyze/route.ts)",
+      "Bash(node scripts/verify-agent.js VISION_AGENT ./src/hooks/useAnalysis.ts)",
+      "Bash(node scripts/verify-agent.js VISION_AGENT ./src/components/PhotoCapture.tsx)",
+      "Bash(node scripts/verify-agent.js COLOR_AGENT ./src/lib/colorPalettes.ts)",
+      "Bash(node scripts/verify-agent.js COLOR_AGENT ./src/lib/styleRecommendations.ts)",
+      "Bash(node scripts/verify-agent.js COLOR_AGENT ./src/lib/culturalContext.ts)",
+      "Bash(node scripts/verify-agent.js COLOR_AGENT ./src/components/ColorPalette.tsx)",
+      "Bash(node scripts/verify-agent.js COLOR_AGENT ./src/components/ColorSwatch.tsx)"
     ]
   }
 }
