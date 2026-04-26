@@ -1,8 +1,8 @@
-const { COLOR_SEASONS } = require('../lib/constants');
-const { getPalette, validateHex } = require('../lib/colorPalettes');
-const { getStyleRecommendations } = require('../lib/styleRecommendations');
-const { getCulturalStyleNotes } = require('../lib/culturalContext');
-const { CULTURAL_CONTEXTS } = require('../lib/constants');
+const { COLOR_SEASONS } = require('../src/lib/constants');
+const { getPalette, validateHex } = require('../src/lib/colorPalettes');
+const { getStyleRecommendations } = require('../src/lib/styleRecommendations');
+const { getCulturalStyleNotes } = require('../src/lib/culturalContext');
+const { CULTURAL_CONTEXTS } = require('../src/lib/constants');
 
 let passed = 0, failed = 0;
 const fail = (msg) => { console.error('FAIL:', msg); failed++; };

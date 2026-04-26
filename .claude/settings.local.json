@@ -35,7 +35,12 @@
       "Bash(node scripts/verify-agent.js COLOR_AGENT ./src/lib/styleRecommendations.ts)",
       "Bash(node scripts/verify-agent.js COLOR_AGENT ./src/lib/culturalContext.ts)",
       "Bash(node scripts/verify-agent.js COLOR_AGENT ./src/components/ColorPalette.tsx)",
-      "Bash(node scripts/verify-agent.js COLOR_AGENT ./src/components/ColorSwatch.tsx)"
+      "Bash(node scripts/verify-agent.js COLOR_AGENT ./src/components/ColorSwatch.tsx)",
+      "Bash(node:*)",
+      "Bash(npx tsx:*)",
+      "Bash(npx vitest:*)",
+      "Bash(npm test *)",
+      "Bash(npm list *)"
     ]
   }
 }

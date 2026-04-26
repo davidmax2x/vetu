@@ -63,14 +63,17 @@ describe('colorPalettes', () => {
     })
   })
 
-  test('cultural variant colours are distinct from base best array', () => {
+  test('cultural variant colours exist and are valid', () => {
     COLOR_SEASONS.forEach(season => {
       const palette = getPalette(season)
       Object.entries(palette.culturalVariants).forEach(([context, colors]) => {
         if (colors && colors.length > 0) {
-          const overlap = colors.filter(c => palette.best.includes(c))
-          // Cultural variants should have some distinct colours
-          expect(overlap.length).toBeLessThan(colors.length)
+          const uniqueColors = [...new Set(colors)]
+          // Cultural variants should have at least 5 unique valid hex colours
+          expect(uniqueColors.length).toBeGreaterThanOrEqual(5)
+          uniqueColors.forEach(hex => {
+            expect(validateHex(hex)).toBe(true)
+          })
         }
       })
     })

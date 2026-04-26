@@ -1,5 +1,7 @@
-import { validateHex, sanitizeHex } from '@/lib/colorPalettes'
+import { describe, test, expect } from 'vitest'
+import { validateHex, sanitizeHex, getPalette } from '@/lib/colorPalettes'
 import { getCulturalStyleNotes } from '@/lib/culturalContext'
+import { COLOR_SEASONS } from '@/lib/constants'
 
 describe('VISION + COLOR integration', () => {
   test('validateHex returns true for valid hex', () => {
@@ -28,9 +30,6 @@ describe('VISION + COLOR integration', () => {
   })
 
   test('all 12 seasons have cultural variants with at least 6 colours each', () => {
-    const { COLOR_SEASONS } = require('@/lib/constants')
-    const { getPalette } = require('@/lib/colorPalettes')
-
     COLOR_SEASONS.forEach((season: string) => {
       const palette = getPalette(season)
       const variants = palette.culturalVariants

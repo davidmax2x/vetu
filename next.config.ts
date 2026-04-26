@@ -11,9 +11,7 @@ const baseConfig: NextConfig = {
       { hostname: 'vetu.ai' },
     ]
   },
-  experimental: {
-    serverComponentsExternalPackages: ['sharp']
-  }
+  serverExternalPackages: ['sharp']
 };
 
 const pwaConfig = withPWA({

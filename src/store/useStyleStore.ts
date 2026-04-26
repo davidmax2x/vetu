@@ -22,10 +22,11 @@ interface StyleStore {
   applyManualOverride: (field: string, value: any) => void
 
   outfits: any[]
+  outfitsLocked: number
   palette: any
   styleRecs: any
   tier: 'free' | 'pro'
-  setRecommendations: (data: { outfits: any[], palette: any, styleRecs: any, tier: 'free' | 'pro' }) => void
+  setRecommendations: (data: { outfits: any[], outfitsLocked?: number, palette: any, styleRecs: any, tier: 'free' | 'pro' }) => void
 
   tryOnImages: Record<string, any>
   setTryOnStatus: (outfitId: string, status: any) => void
@@ -71,11 +72,12 @@ export const useStyleStore = create<StyleStore>((set) => ({
   })),
 
   outfits: [],
+  outfitsLocked: 0,
   palette: null,
   styleRecs: null,
   tier: 'free',
-  setRecommendations: ({ outfits, palette, styleRecs, tier }) =>
-    set({ outfits, palette, styleRecs, tier }),
+  setRecommendations: ({ outfits, outfitsLocked = 0, palette, styleRecs, tier }) =>
+    set({ outfits, outfitsLocked, palette, styleRecs, tier }),
 
   tryOnImages: {},
   setTryOnStatus: (outfitId, status) => set((state) => ({
